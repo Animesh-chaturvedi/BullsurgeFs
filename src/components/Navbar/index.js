@@ -4,6 +4,7 @@ import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import FileInput from "../FileInput";
 import { Typography } from "@mui/material";
+import PersonIcon from '@mui/icons-material/Person';
 
 const Navbar = ({ handlePhotoUpload }) => {
   const style = {
@@ -56,12 +57,16 @@ const Navbar = ({ handlePhotoUpload }) => {
         pl: 12,
       }}
     >
-      <div>
+      <div style={{display:"flex"}}>
+        <PersonIcon style = {{width:"45px", height:"45px"}}/>
+        <div>
       <Typography sx={{fontWeight:"bold", m:0}}>MyUnsplash Clone</Typography>
       <Typography variant="caption" >devchallenge.io</Typography>
       </div>
+      </div>
       <div>
-        <Button onClick={handleOpen} variant="contained" color="success">
+
+        <Button onClick={handleOpen} variant="contained" color="success" sx={{p:1.5}}>
           Add a photo{" "}
         </Button>
         <Modal

@@ -34,7 +34,7 @@ const FileInput = ({ name, label, value, type, handleInputState, handlePhotoUplo
             const apiUrl = process.env.REACT_APP_API_URL + "/add";
             const { data: res } = await axios.post(apiUrl, { img: url });
             handlePhotoUpload(res.data)
-            console.log(res.data)
+            // console.log(res.data)
           } catch (error) {
             console.log(error);
           }
@@ -66,7 +66,7 @@ const FileInput = ({ name, label, value, type, handleInputState, handlePhotoUplo
         type={type}
         ref={inputRef}
         onChange={(e) => {
-            console.log(e.currentTarget.files[0])
+            // console.log(e.currentTarget.files[0])
           handleInputState(name, e.currentTarget.files[0]);
         }}
         // value={value}

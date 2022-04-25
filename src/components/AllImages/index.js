@@ -15,7 +15,7 @@ export default function AllImages({ photos, getAllImages, end, numUploaded }) {
     if (photosRef.current) {
       const { scrollTop, scrollHeight, clientHeight } = photosRef.current;
       if (scrollTop + clientHeight === scrollHeight) {
-        console.log(end)
+        // console.log(end)
         if(!end){
           getAllImages()
         };
